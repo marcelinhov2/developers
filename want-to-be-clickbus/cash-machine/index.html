@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Cash Machine</title>
+    </head>
+    <body ng-app="app">
+
+        <h1>Cash Machine</h1>
+
+        <div id="cash-machine" ng-controller="cashMachineController">
+            <form ng-submit="calculate($event)">
+                <input type="number" ng-model="amount" placeholder="Amount" />
+
+                <input type="submit" value="Calculate" />
+            </form>
+
+            <div id="results" ng-if="money.length">{{money}}</div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
